@@ -17,12 +17,12 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        ink: '#0A0A0A',
-        'burgundy-deep': '#2B0810',
-        burgundy: '#4A0D16',
-        gold: '#C8A46B',
-        olive: '#787A48',
-        cream: '#F6F2EA',
+        sand: '#D8C1A0',
+        stone: '#C6A57D',
+        olive: '#73630D',
+        gold: '#D29C53',
+        brown: '#5A3B22',
+        cream: '#FAF7F2',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
