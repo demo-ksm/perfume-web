@@ -1,134 +1,121 @@
 {
-  "project_name": "ÉTHERA - Cinematic Luxury Perfume Landing Page",
-  "theme": "dark",
-  "general_ui_ux_guidelines": [
-    "Continuous cinematic journey: Never make the user feel like they are jumping between separate blocks. Use soft blurred transitions or intersecting scroll-triggers.",
-    "Generous Whitespace (Macro-spacing): Use p-24, p-32 to give elements breathing room. The hero must be fully immersive (100vh).",
-    "Minimal Copy: Rely on visual storytelling. Hide secondary information behind subtle hover states or quick-views.",
-    "Premium Hover States: Never snap. Use slow 0.4s to 0.6s ease-in-out transitions. Add soft glows (using accent gold) and slight upward lifts (-translate-y-2).",
-    "Data Test IDs: All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='hero-cta-button')."
-  ],
-  "typography": {
-    "headings": "Cormorant Garamond",
-    "body": "Inter",
-    "rules": [
-      "Headings must use tight tracking (tracking-tighter) and be massive (text-5xl to text-7xl for hero).",
-      "Use italicized editorial accents for single words inside headings (e.g., 'Every Drop Tells a <span class=\"italic font-light\">Story</span>').",
-      "Body text must be highly readable, tracking-wide for overlines/subtitles.",
-      "Never use Cormorant Garamond for tiny utility text. Use Inter uppercase with wide letter-spacing."
-    ]
-  },
+  "brand": "SOLÉA",
+  "tagline": "Where Nature Becomes Memory.",
+  "vibe": "Luxury, editorial, quiet, sophisticated, minimal, organic, timeless, natural.",
   "colors": {
-    "primary_bg": "#0A0A0A",
-    "burgundy_deep": "#2B0810",
-    "burgundy_rich": "#4A0D16",
-    "accent_gold": "#C8A46B",
-    "accent_olive": "#787A48",
-    "text_light": "#F6F2EA",
-    "rules": [
-      "Base background must be #0A0A0A. Use the burgundy variants (#2B0810, #4A0D16) as massive radial gradients (blob backgrounds) to create an ambient cinematic glow.",
-      "Accent Gold (#C8A46B) should be used for thin lines (1px), subtle glowing text, and magnetic CTA borders.",
-      "Text Light (#F6F2EA) is the primary text color. Dim it to 60% opacity for secondary body text.",
-      "Do not use solid gold buttons. Use glass buttons with a 1px gold border and a subtle gold inner glow on hover.",
-      "CRITICAL: Do not use complete transparent background in header or overlays where text visibility is compromised. Always use glassmorphism with blur and a tint of background."
-    ]
+    "primary_bg": "#D8C1A0",
+    "secondary": "#C6A57D",
+    "accent_olive": "#73630D",
+    "luxury_gold": "#D29C53",
+    "deep_brown": "#5A3B22",
+    "text_cream": "#FAF7F2"
   },
-  "visual_enhancers": {
-    "effects": [
-      "Floating gold dust: Use a subtle particle system (via Framer Motion or lightweight Canvas) in the Hero and 3D section.",
-      "Fog/smoke overlays: Use slow CSS keyframe animations of radial gradients to simulate fog.",
-      "Glass reflections: background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); border: 1px solid rgba(200, 164, 107, 0.15).",
-      "Grain texture: Add a fixed full-screen SVG noise overlay at 2% to 4% opacity to kill the 'digital' feel."
-    ]
-  },
-  "component_instructions": {
-    "loader": "Premium Loader: 100vh dark bg, animated golden line drawing the logo, fading out with a blur.",
-    "navbar": "Transparent Navbar: Glassmorphism on scroll (backdrop-blur-md, bg-black/40). Never fully transparent on content. Magnetic CTA button. Links use underline expand on hover.",
-    "hero": "Hero Section: 100vh, matte black rotating podium, floating particles. Center headline 'Every Drop Tells a Story.' (story italicized). Watch Craftsmanship CTA uses smooth scroll to section.",
-    "fragrance_story": "Split-screen editorial. Use framer-motion or GSAP ScrollTrigger for word-by-word opacity reveal. Slow bg radial gradient transition.",
-    "fragrance_notes": "3 floating glass cards (Top, Heart, Base). Hover triggers lift, inner gold glow, and glass reflection sweep.",
-    "collection": "4 featured perfumes in an asymmetric bento or staggered grid. Premium card styling, hover shadow/motion. Quick-view minimal modal.",
-    "3d_experience": "Canvas filling 80vh. Interactive 3D bottle (R3F) or mouse-move 2.5D parallax fallback.",
-    "craftsmanship": "Scroll-based storytelling timeline. A vertical golden progress line connects stages (Selection, Composition, Design, Finishing). Background fades between cinematic images.",
-    "ingredients": "Editorial floating grid of images (Bergamot, Jasmine, Sandalwood) moving at different parallax speeds.",
-    "testimonials": "Minimal luxury cards. Fade-in on scroll with soft glass borders.",
-    "newsletter": "Visual-only large editorial block. Minimal email field (border-bottom only), gold text button.",
-    "footer": "Massive 'ÉTHERA' logo (text-[10vw]). Minimal nav links."
-  },
-  "layouts": {
-    "grid_system": "Asymmetrical grids (col-span-full md:col-span-8, etc.). Never fill 100% symmetrically. Use generous gap-12 to gap-24.",
-    "spacing": "Mobile-first padding. Sections must have min-h-screen to allow immersive storytelling.",
-    "alignment": "Optical alignment. Text often left-aligned against right-aligned heavy imagery to create tension."
-  },
-  "motion": {
-    "scroll_animations": "Use smooth scrolling globally (e.g., Lenis). Elements should fade and translate up slightly on scroll.",
-    "micro_interactions": "Magnetic buttons, slow border color shifts, image scale inside overflow-hidden wrappers on hover."
-  },
-  "accessibility": {
-    "contrast": "Ensure #F6F2EA text on #0A0A0A or #2B0810 background meets APCA/WCAG standards.",
-    "focus_states": "Use an elegant gold ring (ring-1 ring-[#C8A46B] ring-offset-2 ring-offset-[#0A0A0A]) for keyboard navigation.",
-    "aria": "Add aria-hidden='true' to decorative particle effects and background layers."
-  },
-  "media": {
-    "image_urls": {
-      "hero_fallback": {
-        "url": "https://images.unsplash.com/photo-1598634222670-87c5f558119c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlJTIwZGFya3xlbnwwfHx8fDE3ODM4NDg1OTV8MA&ixlib=rb-4.1.0&q=85",
-        "category": "hero",
-        "description": "Clear glass perfume bottle on black background"
-      },
-      "collection_1": {
-        "url": "https://images.unsplash.com/photo-1553699357-fdefb876c402?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlJTIwZGFya3xlbnwwfHx8fDE3ODM4NDg1OTV8MA&ixlib=rb-4.1.0&q=85",
-        "category": "collection",
-        "description": "Luxury perfume selective focus"
-      },
-      "collection_2": {
-        "url": "https://images.pexels.com/photos/36779953/pexels-photo-36779953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "category": "collection",
-        "description": "Luxury perfume bottle resting on textured fabric"
-      },
-      "collection_3": {
-        "url": "https://images.pexels.com/photos/15096784/pexels-photo-15096784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "category": "collection",
-        "description": "Luxurious perfume bottle displayed on rustic wood"
-      },
-      "collection_4": {
-        "url": "https://images.unsplash.com/photo-1709662217618-83586dc9b777?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxwZXJmdW1lciUyMGxhYm9yYXRvcnklMjBhdGVsaWVyJTIwY3JhZnRzbWFuc2hpcHxlbnwwfHx8fDE3ODE5MDM3NDV8MA&ixlib=rb-4.1.0&q=85",
-        "category": "collection",
-        "description": "Perfume bottle on lab table"
-      },
-      "ingredient_jasmine": {
-        "url": "https://images.unsplash.com/photo-1518343265568-51eec52d40da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxqYXNtaW5lJTIwZmxvd2VyJTIwZGFyayUyMG1vb2R5fGVufDB8fHx8MTc4Mzg0ODU5NXww&ixlib=rb-4.1.0&q=85",
-        "category": "ingredients",
-        "description": "Pink petaled flower dark moody"
-      },
-      "ingredient_sandalwood": {
-        "url": "https://images.unsplash.com/photo-1702001145743-094b0b7ead51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxzYW5kYWx3b29kJTIwZGFyayUyMHdvb2R8ZW58MHx8fHwxNzgzODQ4NTk1fDA&ixlib=rb-4.1.0&q=85",
-        "category": "ingredients",
-        "description": "Sandalwood piece of wood"
-      },
-      "craftsmanship_bg": {
-        "url": "https://images.unsplash.com/photo-1672848700906-2b8ca62639e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxwZXJmdW1lciUyMGxhYm9yYXRvcnklMjBhdGVsaWVyJTIwY3JhZnRzbWFuc2hpcHxlbnwwfHx8fDE3ODE5MDM3NDV8MA&ixlib=rb-4.1.0&q=85",
-        "category": "craftsmanship",
-        "description": "Perfumery laboratory background"
-      }
+  "typography": {
+    "headings": {
+      "font": "Cormorant Garamond, serif",
+      "style": "Huge editorial typography, high contrast, font-light to regular"
+    },
+    "body": {
+      "font": "Inter, sans-serif",
+      "style": "Clean, highly legible, modern"
+    },
+    "buttons": {
+      "font": "Inter, sans-serif",
+      "style": "Small uppercase, high letter-spacing (tracking-[0.2em])"
     }
   },
-  "3d_libraries": [
-    "@react-three/fiber",
-    "@react-three/drei",
-    "framer-motion",
-    "lucide-react",
-    "clsx",
-    "tailwind-merge"
+  "materials_mood": [
+    "travertine stone",
+    "brushed brass",
+    "crystal glass",
+    "linen",
+    "silk",
+    "botanical textures",
+    "sandstone"
   ],
-  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
-    "Share the guideline implementation for .js/.jsx files (not .tsx) as the repository is JavaScript based.",
-    "Do NOT use standard Vercel/SaaS template styles. This is an Awwwards-winning cinematic site.",
-    "Do NOT center-align everything. Use asymmetry.",
-    "Avoid pure black (#000000) for large text; use #F6F2EA. Avoid pure white backgrounds.",
-    "All buttons must be animated using framer-motion (scale on hover/tap) and have data-testid attributes.",
-    "Use lucide-react for minimal, thin-stroke icons.",
-    "Ensure all gradients blend smoothly with #0A0A0A (the base page color).",
-    "Implement a global noise overlay using a fixed, pointer-events-none div with an SVG grain background."
+  "image_urls": {
+    "scene_1_hero": {
+      "video_fallback_nature": "https://assets.mixkit.co/videos/preview/mixkit-sun-shining-through-the-leaves-of-a-tree-44-large.mp4",
+      "botanical_shadows_bg": "https://images.unsplash.com/photo-1764853295870-719b93faca76?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxnb2xkZW4lMjBob3VyJTIwYm90YW5pY2FsJTIwbGVhdmVzfGVufDB8fHx8MTc4Mzg1MDY4OHww&ixlib=rb-4.1.0&q=85",
+      "lush_warm_floral_reveal": "https://images.unsplash.com/photo-1561848355-890d054dc55a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxsdXNoJTIwd2FybSUyMGZsb3dlcnN8ZW58MHx8fHwxNzgzODUwNjg4fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "scene_2_reveal": {
+      "travertine_podium_texture": "https://images.unsplash.com/photo-1780253460324-9d49f88c74fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHx0cmF2ZXJ0aW5lJTIwc3RvbmUlMjB0ZXh0dXJlfGVufDB8fHx8MTc4Mzg1MDY4OHww&ixlib=rb-4.1.0&q=85"
+    },
+    "scene_3_editorial": {
+      "fashion_linen_1": "https://images.unsplash.com/photo-1597196526281-fe4861daa915?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxlZGl0b3JpYWwlMjBmYXNoaW9uJTIwbGluZW58ZW58MHx8fHwxNzgzODUwNjg4fDA&ixlib=rb-4.1.0&q=85",
+      "fashion_linen_2": "https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxlZGl0b3JpYWwlMjBmYXNoaW9uJTIwbGluZW58ZW58MHx8fHwxNzgzODUwNjg4fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "scene_4_ingredients": {
+      "bergamot": "https://images.unsplash.com/photo-1758181839713-ce6068d79147?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxiZXJnYW1vdCUyMGNpdHJ1cyUyMGZydWl0fGVufDB8fHx8MTc4Mzg1MDY5OHww&ixlib=rb-4.1.0&q=85",
+      "jasmine": "https://images.unsplash.com/photo-1623171404570-1d196759fe20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxqYXNtaW5lJTIwZmxvd2VyJTIwd2hpdGV8ZW58MHx8fHwxNzgzODUwNzA2fDA&ixlib=rb-4.1.0&q=85",
+      "vetiver": "https://images.unsplash.com/photo-1565693235245-37dc4d88a60e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwyfHx2ZXRpdmVyJTIwZ3Jhc3MlMjBuYXR1cmV8ZW58MHx8fHwxNzgzODUwNzA2fDA&ixlib=rb-4.1.0&q=85",
+      "amber": "https://images.unsplash.com/photo-1686043626878-9e391a70632d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxhbWJlciUyMHJlc2luJTIwZ2Vtc3RvbmV8ZW58MHx8fHwxNzgzODUwNjk4fDA&ixlib=rb-4.1.0&q=85",
+      "sandalwood": "https://images.unsplash.com/photo-1702001145743-094b0b7ead51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxzYW5kYWx3b29kJTIwdGV4dHVyZXxlbnwwfHx8fDE3ODM4NTA2ODh8MA&ixlib=rb-4.1.0&q=85",
+      "oud": "https://images.unsplash.com/photo-1576092762791-dd9e2220abd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHxkYXJrJTIwd29vZCUyMHRleHR1cmV8ZW58MHx8fHwxNzgzODUwNzA2fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "scene_5_craftsmanship": {
+      "harvesting": "https://images.unsplash.com/photo-1644101211459-7f9be46fad04?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxoYXJ2ZXN0aW5nJTIwZmxvd2VycyUyMGZpZWxkfGVufDB8fHx8MTc4Mzg1MDY5OHww&ixlib=rb-4.1.0&q=85",
+      "extraction_blending": "https://images.unsplash.com/photo-1605040056130-38d9faad3534?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxlc3NlbnRpYWwlMjBvaWwlMjBibGVuZGluZyUyMGdsYXNzfGVufDB8fHx8MTc4Mzg1MDcwNnww&ixlib=rb-4.1.0&q=85",
+      "luxury_packaging": "https://images.unsplash.com/photo-1759563876829-47c081a2afd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBwZXJmdW1lJTIwYm94JTIwcGFja2FnaW5nfGVufDB8fHx8MTc4Mzg1MDcwNnww&ixlib=rb-4.1.0&q=85"
+    },
+    "scene_7_collection": [
+      "https://images.unsplash.com/photo-1622618991746-fe6004db3a47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxwZXJmdW1lJTIwZ2xhc3MlMjBib3R0bGUlMjBsdXh1cnl8ZW58MHx8fHwxNzgzODUwNjk5fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1594125311687-3b1b3eafa9f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxwZXJmdW1lJTIwZ2xhc3MlMjBib3R0bGUlMjBsdXh1cnl8ZW58MHx8fHwxNzgzODUwNjk5fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1615160460524-432433ba1b8f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxwZXJmdW1lJTIwZ2xhc3MlMjBib3R0bGUlMjBsdXh1cnl8ZW58MHx8fHwxNzgzODUwNjk5fDA&ixlib=rb-4.1.0&q=85"
+    ],
+    "scene_8_journal": [
+      "https://images.unsplash.com/photo-1681026661939-d1b4bbfb9077?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxib3RhbmljYWwlMjBhdGVsaWVyJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzgzODUwNjk4fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1487798452839-c748a707a6b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxib3RhbmljYWwlMjBhdGVsaWVyJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzgzODUwNjk4fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1581572627889-0ff9e6ff8941?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxib3RhbmljYWwlMjBhdGVsaWVyJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzgzODUwNjk4fDA&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "layouts": {
+    "spacing_philosophy": "Generous. Use 2-3x more spacing than feels comfortable. Heavy use of whitespace to convey luxury.",
+    "scene_1": "100vh full-screen video background or high-res image with floating dust micro-animations. Center-aligned minimal logo and golden line element.",
+    "scene_2": "Rotating travertine podium (use image texture or 3D element). Dramatic spotlight lighting effect. Centered focus.",
+    "scene_3": "Asymmetric split layout. Large editorial fashion photography on one side, overlapping subtle typography blocks on the other.",
+    "scene_4": "Horizontal scroll or staggered bento-style grid. 1 evocative image per ingredient (Bergamot, Jasmine, Vetiver, Amber, Sandalwood, Oud). Hover effects to reveal notes.",
+    "scene_5": "Cinematic vertical scroll. Fade-in photography per craftsmanship step. Soft text blocks paired with large images.",
+    "scene_6": "R3F integration. 360 interactive bottle. HDRI lighting using warm golden-hour environment maps.",
+    "scene_7": "Giant editorial presentation. One perfume per screen (100vh each). Parallax scrolling between them.",
+    "scene_8": "Editorial article thumbnails. 3-column elegant grid. Deep margins between columns.",
+    "scene_9": "Minimalist footer. Ultra-clean typography. Deep brown or warm sand background."
+  },
+  "motion": {
+    "philosophy": "Slow, elegant, confident. Think walking into a luxury perfume exhibition.",
+    "effects": [
+      "Smooth parallax scrolling (Lenis strongly recommended)",
+      "Floating pollen / dust particles in hero section",
+      "Slow-motion reveals on scroll",
+      "Subtle scaling of images on hover (duration: 0.8s ease-out)"
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure text contrast over images. Use gradients like sunlight hitting sandstone (e.g., subtle dark/brown overlays if needed to pop Cream text).",
+    "testing": "All interactive elements MUST include data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette provided. DO NOT use generic black or white. AVOID pure black, neon, saturated colors.",
+    "Implement pure HTML/Tailwind for marketing layouts. Use Shadcn ONLY for interactive elements, stripped of any 'Vercel' look to match the luxury organic vibe.",
+    "Ensure all fonts are loaded correctly (Cormorant Garamond and Inter).",
+    "Apply 'data-testid' to all buttons, links, and major semantic elements.",
+    "Use framer-motion for smooth entrance animations. Let elements 'breathe' in rather than snap.",
+    "Do not invent new scenes or sections. Build exactly what is described."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts (except for intentional hero screens), simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) where appropriate, avoiding muddy grays.",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container via `.App { text-align: center; }`.",
+    "Always use modern button styles matching the luxury aesthetic (e.g., crisp edges or perfectly pill-shaped, NOT default browser styles).",
+    "NEVER: use AI assistant Emoji characters.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "You have .js files not .tsx files, implement logic accordingly."
   ]
 }

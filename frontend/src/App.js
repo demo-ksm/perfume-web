@@ -1,54 +1,42 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import '@/App.css';
+import { useLenis } from '@/hooks/useLenis';
+import { Loader } from '@/components/ethera/Loader';
+import { CustomCursor } from '@/components/ethera/CustomCursor';
+import { Navbar } from '@/components/ethera/Navbar';
+import { HeroSection } from '@/components/ethera/HeroSection';
+import { ProductExperience3D } from '@/components/ethera/ProductExperience3D';
+import { CraftsmanshipTimeline } from '@/components/ethera/CraftsmanshipTimeline';
+import { StorySection } from '@/components/ethera/StorySection';
+import { NotesCards } from '@/components/ethera/NotesCards';
+import { CollectionGrid } from '@/components/ethera/CollectionGrid';
+import { IngredientsGrid } from '@/components/ethera/IngredientsGrid';
+import { TestimonialsSection } from '@/components/ethera/TestimonialsSection';
+import { NewsletterSection } from '@/components/ethera/NewsletterSection';
+import { Footer } from '@/components/ethera/Footer';
 
 function App() {
+  useLenis(true);
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="relative min-h-screen bg-ink text-cream">
+      <div className="grain-overlay" aria-hidden="true" />
+      <Loader />
+      <CustomCursor />
+      <Navbar />
+
+      <main>
+        <HeroSection />
+        <ProductExperience3D />
+        <CraftsmanshipTimeline />
+        <StorySection />
+        <NotesCards />
+        <CollectionGrid />
+        <IngredientsGrid />
+        <TestimonialsSection />
+        <NewsletterSection />
+      </main>
+
+      <Footer />
     </div>
   );
 }
