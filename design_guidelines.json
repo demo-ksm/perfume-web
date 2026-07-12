@@ -1,0 +1,134 @@
+{
+  "project_name": "ÉTHERA - Cinematic Luxury Perfume Landing Page",
+  "theme": "dark",
+  "general_ui_ux_guidelines": [
+    "Continuous cinematic journey: Never make the user feel like they are jumping between separate blocks. Use soft blurred transitions or intersecting scroll-triggers.",
+    "Generous Whitespace (Macro-spacing): Use p-24, p-32 to give elements breathing room. The hero must be fully immersive (100vh).",
+    "Minimal Copy: Rely on visual storytelling. Hide secondary information behind subtle hover states or quick-views.",
+    "Premium Hover States: Never snap. Use slow 0.4s to 0.6s ease-in-out transitions. Add soft glows (using accent gold) and slight upward lifts (-translate-y-2).",
+    "Data Test IDs: All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='hero-cta-button')."
+  ],
+  "typography": {
+    "headings": "Cormorant Garamond",
+    "body": "Inter",
+    "rules": [
+      "Headings must use tight tracking (tracking-tighter) and be massive (text-5xl to text-7xl for hero).",
+      "Use italicized editorial accents for single words inside headings (e.g., 'Every Drop Tells a <span class=\"italic font-light\">Story</span>').",
+      "Body text must be highly readable, tracking-wide for overlines/subtitles.",
+      "Never use Cormorant Garamond for tiny utility text. Use Inter uppercase with wide letter-spacing."
+    ]
+  },
+  "colors": {
+    "primary_bg": "#0A0A0A",
+    "burgundy_deep": "#2B0810",
+    "burgundy_rich": "#4A0D16",
+    "accent_gold": "#C8A46B",
+    "accent_olive": "#787A48",
+    "text_light": "#F6F2EA",
+    "rules": [
+      "Base background must be #0A0A0A. Use the burgundy variants (#2B0810, #4A0D16) as massive radial gradients (blob backgrounds) to create an ambient cinematic glow.",
+      "Accent Gold (#C8A46B) should be used for thin lines (1px), subtle glowing text, and magnetic CTA borders.",
+      "Text Light (#F6F2EA) is the primary text color. Dim it to 60% opacity for secondary body text.",
+      "Do not use solid gold buttons. Use glass buttons with a 1px gold border and a subtle gold inner glow on hover.",
+      "CRITICAL: Do not use complete transparent background in header or overlays where text visibility is compromised. Always use glassmorphism with blur and a tint of background."
+    ]
+  },
+  "visual_enhancers": {
+    "effects": [
+      "Floating gold dust: Use a subtle particle system (via Framer Motion or lightweight Canvas) in the Hero and 3D section.",
+      "Fog/smoke overlays: Use slow CSS keyframe animations of radial gradients to simulate fog.",
+      "Glass reflections: background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); border: 1px solid rgba(200, 164, 107, 0.15).",
+      "Grain texture: Add a fixed full-screen SVG noise overlay at 2% to 4% opacity to kill the 'digital' feel."
+    ]
+  },
+  "component_instructions": {
+    "loader": "Premium Loader: 100vh dark bg, animated golden line drawing the logo, fading out with a blur.",
+    "navbar": "Transparent Navbar: Glassmorphism on scroll (backdrop-blur-md, bg-black/40). Never fully transparent on content. Magnetic CTA button. Links use underline expand on hover.",
+    "hero": "Hero Section: 100vh, matte black rotating podium, floating particles. Center headline 'Every Drop Tells a Story.' (story italicized). Watch Craftsmanship CTA uses smooth scroll to section.",
+    "fragrance_story": "Split-screen editorial. Use framer-motion or GSAP ScrollTrigger for word-by-word opacity reveal. Slow bg radial gradient transition.",
+    "fragrance_notes": "3 floating glass cards (Top, Heart, Base). Hover triggers lift, inner gold glow, and glass reflection sweep.",
+    "collection": "4 featured perfumes in an asymmetric bento or staggered grid. Premium card styling, hover shadow/motion. Quick-view minimal modal.",
+    "3d_experience": "Canvas filling 80vh. Interactive 3D bottle (R3F) or mouse-move 2.5D parallax fallback.",
+    "craftsmanship": "Scroll-based storytelling timeline. A vertical golden progress line connects stages (Selection, Composition, Design, Finishing). Background fades between cinematic images.",
+    "ingredients": "Editorial floating grid of images (Bergamot, Jasmine, Sandalwood) moving at different parallax speeds.",
+    "testimonials": "Minimal luxury cards. Fade-in on scroll with soft glass borders.",
+    "newsletter": "Visual-only large editorial block. Minimal email field (border-bottom only), gold text button.",
+    "footer": "Massive 'ÉTHERA' logo (text-[10vw]). Minimal nav links."
+  },
+  "layouts": {
+    "grid_system": "Asymmetrical grids (col-span-full md:col-span-8, etc.). Never fill 100% symmetrically. Use generous gap-12 to gap-24.",
+    "spacing": "Mobile-first padding. Sections must have min-h-screen to allow immersive storytelling.",
+    "alignment": "Optical alignment. Text often left-aligned against right-aligned heavy imagery to create tension."
+  },
+  "motion": {
+    "scroll_animations": "Use smooth scrolling globally (e.g., Lenis). Elements should fade and translate up slightly on scroll.",
+    "micro_interactions": "Magnetic buttons, slow border color shifts, image scale inside overflow-hidden wrappers on hover."
+  },
+  "accessibility": {
+    "contrast": "Ensure #F6F2EA text on #0A0A0A or #2B0810 background meets APCA/WCAG standards.",
+    "focus_states": "Use an elegant gold ring (ring-1 ring-[#C8A46B] ring-offset-2 ring-offset-[#0A0A0A]) for keyboard navigation.",
+    "aria": "Add aria-hidden='true' to decorative particle effects and background layers."
+  },
+  "media": {
+    "image_urls": {
+      "hero_fallback": {
+        "url": "https://images.unsplash.com/photo-1598634222670-87c5f558119c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlJTIwZGFya3xlbnwwfHx8fDE3ODM4NDg1OTV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "hero",
+        "description": "Clear glass perfume bottle on black background"
+      },
+      "collection_1": {
+        "url": "https://images.unsplash.com/photo-1553699357-fdefb876c402?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlJTIwZGFya3xlbnwwfHx8fDE3ODM4NDg1OTV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "collection",
+        "description": "Luxury perfume selective focus"
+      },
+      "collection_2": {
+        "url": "https://images.pexels.com/photos/36779953/pexels-photo-36779953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "collection",
+        "description": "Luxury perfume bottle resting on textured fabric"
+      },
+      "collection_3": {
+        "url": "https://images.pexels.com/photos/15096784/pexels-photo-15096784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "collection",
+        "description": "Luxurious perfume bottle displayed on rustic wood"
+      },
+      "collection_4": {
+        "url": "https://images.unsplash.com/photo-1709662217618-83586dc9b777?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxwZXJmdW1lciUyMGxhYm9yYXRvcnklMjBhdGVsaWVyJTIwY3JhZnRzbWFuc2hpcHxlbnwwfHx8fDE3ODE5MDM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "collection",
+        "description": "Perfume bottle on lab table"
+      },
+      "ingredient_jasmine": {
+        "url": "https://images.unsplash.com/photo-1518343265568-51eec52d40da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxqYXNtaW5lJTIwZmxvd2VyJTIwZGFyayUyMG1vb2R5fGVufDB8fHx8MTc4Mzg0ODU5NXww&ixlib=rb-4.1.0&q=85",
+        "category": "ingredients",
+        "description": "Pink petaled flower dark moody"
+      },
+      "ingredient_sandalwood": {
+        "url": "https://images.unsplash.com/photo-1702001145743-094b0b7ead51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxzYW5kYWx3b29kJTIwZGFyayUyMHdvb2R8ZW58MHx8fHwxNzgzODQ4NTk1fDA&ixlib=rb-4.1.0&q=85",
+        "category": "ingredients",
+        "description": "Sandalwood piece of wood"
+      },
+      "craftsmanship_bg": {
+        "url": "https://images.unsplash.com/photo-1672848700906-2b8ca62639e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxwZXJmdW1lciUyMGxhYm9yYXRvcnklMjBhdGVsaWVyJTIwY3JhZnRzbWFuc2hpcHxlbnwwfHx8fDE3ODE5MDM3NDV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "craftsmanship",
+        "description": "Perfumery laboratory background"
+      }
+    }
+  },
+  "3d_libraries": [
+    "@react-three/fiber",
+    "@react-three/drei",
+    "framer-motion",
+    "lucide-react",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Share the guideline implementation for .js/.jsx files (not .tsx) as the repository is JavaScript based.",
+    "Do NOT use standard Vercel/SaaS template styles. This is an Awwwards-winning cinematic site.",
+    "Do NOT center-align everything. Use asymmetry.",
+    "Avoid pure black (#000000) for large text; use #F6F2EA. Avoid pure white backgrounds.",
+    "All buttons must be animated using framer-motion (scale on hover/tap) and have data-testid attributes.",
+    "Use lucide-react for minimal, thin-stroke icons.",
+    "Ensure all gradients blend smoothly with #0A0A0A (the base page color).",
+    "Implement a global noise overlay using a fixed, pointer-events-none div with an SVG grain background."
+  ]
+}
